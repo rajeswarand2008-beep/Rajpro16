@@ -1,18 +1,9 @@
-USE CollegeDB;
+SET SERVEROUTPUT ON;
 
-DROP PROCEDURE IF EXISTS CalculateSum;
-
-DELIMITER $$
-
-CREATE PROCEDURE CalculateSum()
+DECLARE
+    a INT := 10;
+    b INT := 20;
 BEGIN
-    -- Declare two variables
-    -- Assign values
-    -- Calculate and display the sum
-
-END $$
-
-DELIMITER ;
-
--- Execute the procedure
-CALL CalculateSum();
+    DBMS_OUTPUT.PUT_LINE('Sum = ' || (a + b));
+END;
+/
