@@ -1,18 +1,9 @@
-USE CollegeDB;
+SET SERVEROUTPUT ON;
 
-DROP PROCEDURE IF EXISTS DisplayNumbers;
-
-DELIMITER $$
-
-CREATE PROCEDURE DisplayNumbers()
+DECLARE
+    a INT := 10;
+    b INT := 20;
 BEGIN
-
-    -- Declare counter variable
-
-    -- Write a loop to display numbers from 1 to 10
-
-END $$
-
-DELIMITER ;
-
-CALL DisplayNumbers();
+    DBMS_OUTPUT.PUT_LINE('Sum = ' || (a + b));
+END;
+/
